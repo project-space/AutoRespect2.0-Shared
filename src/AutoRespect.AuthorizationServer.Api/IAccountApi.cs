@@ -35,7 +35,7 @@ namespace AutoRespect.AuthorizationServer.Api
 
         public async Task<R<string>> Register(RegisterRequest request)
         {
-            var uri = $"{endpoint}/Registration/";
+            var uri = $"{endpoint}/api/v1/Registration/";
             var response = await http.Post<RegisterRequest, string>(uri, request);
 
             return response;
@@ -43,7 +43,7 @@ namespace AutoRespect.AuthorizationServer.Api
 
         public async Task<R<string>> SignIn(SignInRequest request)
         {
-            var uri = $"{endpoint}/Login/";
+            var uri = $"{endpoint}/api/v1/Login/";
             var response = await http.Post<SignInRequest, string>(uri, request);
 
             return response;
