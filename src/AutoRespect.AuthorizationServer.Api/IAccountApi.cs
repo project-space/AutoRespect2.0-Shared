@@ -21,8 +21,7 @@ namespace AutoRespect.AuthorizationServer.Api
     {
         private readonly IHttp http;
         private readonly IEndpointGetter endpointGetter;
-
-        Lazy<string> endpoint;
+        private readonly string endpoint;
         
         public AccountApi(
             IHttp http,
@@ -31,12 +30,12 @@ namespace AutoRespect.AuthorizationServer.Api
             this.http = http;
             this.endpointGetter = endpointGetter;
 
-            endpoint = new Lazy<string>(() => endpointGetter.Get(MicroserviceType.AuthorizationServer).Result);
+            endpoint = endpointGetter.Get(MicroserviceType.IdentityServer).Result;
         }
 
         public async Task<R<string>> Register(RegisterRequest request)
         {
-            var uri = $"{endpoint.Value}/Registration/";
+            var uri = $"{endpoint}/Registration/";
             var response = await http.Post<RegisterRequest, string>(uri, request);
 
             return response;
@@ -44,7 +43,7 @@ namespace AutoRespect.AuthorizationServer.Api
 
         public async Task<R<string>> SignIn(SignInRequest request)
         {
-            var uri = $"{endpoint.Value}/Login/";
+            var uri = $"{endpoint}/Login/";
             var response = await http.Post<SignInRequest, string>(uri, request);
 
             return response;
