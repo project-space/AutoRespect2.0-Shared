@@ -9,8 +9,4 @@
     <Folder Include="ResourceServer\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\submodules\AutoRespect2.0-Infrastructure\src\AutoRespect.Infrastructure.Errors.Design\AutoRespect.Infrastructure.Errors.Design.csproj" />
-  </ItemGroup>
-
 </Project>
