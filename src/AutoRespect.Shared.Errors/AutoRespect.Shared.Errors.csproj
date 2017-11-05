@@ -5,12 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\submodules\AutoRespect2.0-Infrastructure\src\AutoRespect.Infrastructure.ErrorHandling\AutoRespect.Infrastructure.ErrorHandling.csproj" />
+    <Folder Include="AuthorizationServer\" />
+    <Folder Include="ResourceServer\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AuthorizationServer\" />
-    <Folder Include="ResourceServer\" />
+    <ProjectReference Include="..\AutoRespect.Shared.Errors.Design\AutoRespect.Shared.Errors.Design.csproj" />
   </ItemGroup>
 
 </Project>

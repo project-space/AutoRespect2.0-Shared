@@ -1,6 +1,6 @@
-﻿using AutoRespect.Infrastructure.ErrorHandling;
+﻿using AutoRespect.Shared.Errors.Design;
 
-namespace AutoRespect.Shared.Errors.Common
+namespace AutoRespect.Shared.Errors.DataTransfer
 {
     public class ServerError : Error
     {
