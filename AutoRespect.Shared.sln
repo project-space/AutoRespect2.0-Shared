@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7F103310-9F78-4A34-B31D-9FBF4F0448F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRespect.Shared.Errors", "src\AutoRespect.Shared.Errors\AutoRespect.Shared.Errors.csproj", "{EFFA5AE7-EE6C-4449-90BC-2E4B0DC940F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFFA5AE7-EE6C-4449-90BC-2E4B0DC940F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFFA5AE7-EE6C-4449-90BC-2E4B0DC940F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFFA5AE7-EE6C-4449-90BC-2E4B0DC940F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFFA5AE7-EE6C-4449-90BC-2E4B0DC940F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EFFA5AE7-EE6C-4449-90BC-2E4B0DC940F2} = {7F103310-9F78-4A34-B31D-9FBF4F0448F4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {209C2709-C082-4C75-92B6-79EF616EC51A}
+	EndGlobalSection
+EndGlobal
