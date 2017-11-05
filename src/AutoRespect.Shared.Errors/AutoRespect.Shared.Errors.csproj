@@ -4,4 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\submodules\AutoRespect2.0-Infrastructure\src\AutoRespect.Infrastructure.ErrorHandling\AutoRespect.Infrastructure.ErrorHandling.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AuthorizationServer\" />
+    <Folder Include="ResourceServer\" />
+  </ItemGroup>
+
 </Project>
