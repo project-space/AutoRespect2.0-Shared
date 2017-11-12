@@ -1,4 +1,4 @@
-﻿namespace AutoRespect.AuthorizationServer.DataTransfer
+﻿namespace AutoRespect.AuthorizationServer.DataTransfer.Request
 {
     public class SignInRequest
     {

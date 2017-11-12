@@ -1,6 +1,6 @@
-﻿using System;
-using System.Threading.Tasks;
-using AutoRespect.AuthorizationServer.DataTransfer;
+﻿using System.Threading.Tasks;
+using AutoRespect.AuthorizationServer.DataTransfer.Request;
+using AutoRespect.AuthorizationServer.DataTransfer.Response;
 using AutoRespect.Infrastructure.Api.Design;
 using AutoRespect.Infrastructure.DI.Design;
 using AutoRespect.Infrastructure.DI.Design.Attributes;
@@ -12,8 +12,8 @@ namespace AutoRespect.AuthorizationServer.Api
 
     public interface IAccountApi
     {
-        Task<R<string>> SignIn(SignInRequest request);
-        Task<R<string>> Register(RegisterRequest request);
+        Task<R<TokensResponse>> SignIn(SignInRequest request);
+        Task<R<TokensResponse>> Register(RegisterRequest request);
     }
 
     [DI(LifeCycle.Singleton)]
@@ -22,7 +22,7 @@ namespace AutoRespect.AuthorizationServer.Api
         private readonly IHttp http;
         private readonly IEndpointGetter endpointGetter;
         private readonly string endpoint;
-        
+
         public AccountApi(
             IHttp http,
             IEndpointGetter endpointGetter)
@@ -33,18 +33,18 @@ namespace AutoRespect.AuthorizationServer.Api
             endpoint = endpointGetter.Get(MicroserviceType.IdentityServer).Result;
         }
 
-        public async Task<R<string>> Register(RegisterRequest request)
+        public async Task<R<TokensResponse>> Register(RegisterRequest request)
         {
             var uri = $"{endpoint}/api/v1/Registration/";
-            var response = await http.Post<RegisterRequest, string>(uri, request);
+            var response = await http.Post<RegisterRequest, TokensResponse>(uri, request);
 
             return response;
         }
 
-        public async Task<R<string>> SignIn(SignInRequest request)
+        public async Task<R<TokensResponse>> SignIn(SignInRequest request)
         {
             var uri = $"{endpoint}/api/v1/Login/";
-            var response = await http.Post<SignInRequest, string>(uri, request);
+            var response = await http.Post<SignInRequest, TokensResponse>(uri, request);
 
             return response;
         }
