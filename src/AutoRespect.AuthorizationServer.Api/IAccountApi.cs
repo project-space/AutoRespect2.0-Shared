@@ -13,7 +13,7 @@ namespace AutoRespect.AuthorizationServer.Api
     public interface IAccountApi
     {
         Task<R<TokensResponse>> SignIn(SignInRequest request);
-        Task<R<TokensResponse>> Register(RegisterRequest request);
+        Task<R<TokensResponse>> SignUp(RegisterRequest request);
     }
 
     [DI(LifeCycle.Singleton)]
@@ -33,7 +33,7 @@ namespace AutoRespect.AuthorizationServer.Api
             endpoint = endpointGetter.Get(MicroserviceType.IdentityServer).Result;
         }
 
-        public async Task<R<TokensResponse>> Register(RegisterRequest request)
+        public async Task<R<TokensResponse>> SignUp(RegisterRequest request)
         {
             var uri = $"{endpoint}/api/v1/Registration/";
             var response = await http.Post<RegisterRequest, TokensResponse>(uri, request);
