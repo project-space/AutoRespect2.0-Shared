@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\AutoRespect2.0-Infrastructure\src\AutoRespect.Infrastructure.Api.Design\AutoRespect.Infrastructure.Api.Design.csproj" />
+    <ProjectReference Include="..\..\..\AutoRespect2.0-Infrastructure\src\AutoRespect.Infrastructure.DI.Design\AutoRespect.Infrastructure.DI.Design.csproj" />
+    <ProjectReference Include="..\..\..\AutoRespect2.0-Infrastructure\src\AutoRespect.Infrastructure.Errors.Design\AutoRespect.Infrastructure.Errors.Design.csproj" />
+    <ProjectReference Include="..\..\..\AutoRespect2.0-Infrastructure\src\AutoRespect.Infrastructure.ServiceDiscovery.Design\AutoRespect.Infrastructure.ServiceDiscovery.Design.csproj" />
+    <ProjectReference Include="..\AutoRespect.ResourceServer.DataTransfer\AutoRespect.ResourceServer.DataTransfer.csproj" />
+  </ItemGroup>
+
+</Project>
